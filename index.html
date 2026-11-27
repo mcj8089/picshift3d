@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Prism Shift 3D - Relaxing 3D Slide Puzzle</title>
+
+  <!-- ===== SEO / 社媒预览 (OG + Twitter Card) ===== -->
+  <meta name="description" content="Prism Shift 3D - a relaxing 3D slide puzzle. Swipe rows and columns to reassemble the picture. Play free on pipygames.com." />
+  <meta name="keywords" content="3D puzzle, slide puzzle, brain game, casual game, pipygames" />
+  <meta name="author" content="pipygames.com" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="pipygames.com" />
+  <meta property="og:title" content="Prism Shift 3D - Relaxing 3D Slide Puzzle" />
+  <meta property="og:description" content="Swipe rows and columns to reassemble the picture. A calming 3D slide puzzle." />
+  <meta property="og:image" content="assets/images/ui_share_card.png" />
+  <meta property="og:url" content="https://pipygames.com" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prism Shift 3D - Relaxing 3D Slide Puzzle" />
+  <meta name="twitter:description" content="Swipe rows and columns to reassemble the picture. A calming 3D slide puzzle." />
+  <meta name="twitter:image" content="assets/images/ui_share_card.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Three.js 模块映射（本地 lib，离线可用） -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./lib/three.module.js"
+    }
+  }
+  </script>
+
+  <!-- 线上 SDK（若可用则覆盖同名方法；离线时本地实现兜底） -->
+  <script src="https://pipygames.com/sdk/pipysdk.min.js" async></script>
+</head>
+<body>
+  <!-- 开屏加载：风格化动画（含 pipygames.com 标识，非纯静态进度条） -->
+  <div id="splash">
+    <div class="splash-ring"></div>
+    <div class="splash-logo">Prism Shift <span>3D</span></div>
+    <div class="splash-domain">pipygames.com</div>
+    <div class="splash-tip">Loading…</div>
+  </div>
+
+  <!-- 域名锁提示（仅非白名单域名出现） -->
+  <div id="domain-note">Unauthorized domain. Redirecting to pipygames.com…</div>
+
+  <canvas id="game"></canvas>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
